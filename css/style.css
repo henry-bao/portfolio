@@ -135,7 +135,6 @@ section {
 .close-tag {
     color: #2f7295;
 }
-
 /* Animation */
 .anim-typewriter {
     animation: typewriter 2.2s steps(22) 1s 1 normal both,
@@ -215,6 +214,7 @@ section {
     color: #06696b;
     cursor: pointer;
 }
+
 /** RESPONSIVE **/
 @media (min-width: 768px) {
     .menu-list li a:hover,
@@ -239,18 +239,10 @@ section {
     .nav .logo a {
         font-size: 20px;
     }
-    @keyframes typewriter {
-        from {
-            width: 0;
-        }
-        to {
-            width: 28em;
-        }
-    }
 }
 @media (max-width: 768px) {
     .header-line {
-        font-size: 60%;
+        font-size: 50%;
         top: 40%;
     }
     body.disableScroll {
