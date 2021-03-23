@@ -1,26 +1,33 @@
 'use strict';
 
 const body = document.querySelector('body');
-const navBtn = document.querySelector('.menu-list li a');
+const navBtn = document.querySelectorAll('.menu-list li');
 const menu = document.querySelector('.menu-list');
 const navBar = document.querySelector('.nav');
 const menuBtn = document.querySelector('.menu-btn');
-const cancelBtn = document.querySelector('.cancel-btn');
+
+let menuOpen = false;
 menuBtn.onclick = () => {
-    menu.classList.add('active');
-    menuBtn.classList.add('hide');
-    body.classList.add('disableScroll');
+    if (!menuOpen) {
+        menuBtn.classList.add('open');
+        menu.classList.add('active');
+        body.classList.add('disableScroll');
+    } else {
+        menuBtn.classList.remove('open');
+        menu.classList.remove('active');
+        body.classList.remove('disableScroll');
+    }
+    menuOpen = !menuOpen;
 };
-cancelBtn.onclick = () => {
-    menu.classList.remove('active');
-    menuBtn.classList.remove('hide');
-    body.classList.remove('disableScroll');
-};
-navBtn.onclick = () => {
-    menu.classList.remove('active');
-    menuBtn.classList.remove('hide');
-    body.classList.remove('disableScroll');
-};
+
+navBtn.forEach((btn) => {
+    btn.onclick = () => {
+        menu.classList.remove('active');
+        body.classList.remove('disableScroll');
+        menuBtn.classList.remove('open');
+        menuOpen = !menuOpen;
+    };
+});
 
 window.onscroll = () => {
     this.scrollY > 20 ? navBar.classList.add('sticky') : navBar.classList.remove('sticky');
