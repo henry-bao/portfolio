@@ -79,7 +79,7 @@ section {
     height: 30px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
-    border: 2px solid rgba(255, 255, 255, 0.75);
+    border: 1.5px solid rgba(255, 255, 255, 0.75);
     display: none;
 }
 .menu-burger {
@@ -107,14 +107,13 @@ section {
 }
 /* Animation */
 .menu-btn.open .menu-burger {
-    transform: translateX(-35px);
     background: transparent;
 }
 .menu-btn.open .menu-burger::before {
-    transform: rotate(45deg) translate(25px, -25px);
+    transform: rotate(45deg);
 }
 .menu-btn.open .menu-burger::after {
-    transform: rotate(-45deg) translate(25px, 25px);
+    transform: rotate(-45deg);
 }
 
 /** HEADER **/
@@ -206,12 +205,12 @@ section {
     color: #c0738b;
 }
 .about-click {
-    color: #bc6518;
+    color: #6b96b6;
     transition: all 0.3s ease;
     text-decoration: none;
 }
 .about-click:hover {
-    color: #06696b;
+    color: #2f7295;
     cursor: pointer;
 }
 
@@ -238,6 +237,11 @@ section {
 @media (max-width: 992px) {
     .nav .logo a {
         font-size: 20px;
+    }
+    .about-title {
+        padding-top: 0;
+        padding-bottom: 0.5em;
+        font-size: 24px;
     }
 }
 @media (max-width: 768px) {
