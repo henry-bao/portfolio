@@ -1,7 +1,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-/* universal settings */
+/***************************** UNIVERSAL *****************************/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,21 +13,30 @@ html {
     scroll-behavior: smooth;
 }
 
-/** SECTIONS **/
-/* Section 1 */
+/***************************** SECTIONS *****************************/
 section {
     height: 100vh;
     padding: 4em;
 }
+/*=============== landing section ===============*/
 .landing-css {
     background-color: rgb(15, 15, 15);
     color: rgba(255, 255, 255, 0.75);
 }
+/*=============== About section ===============*/
 .about-css {
+    background-color: rgba(245, 245, 245);
+}
+/*=============== Project section ===============*/
+.project-css {
+    background-color: rgba(235, 235, 235);
+}
+/*=============== Contact section ===============*/
+.contact-css {
     background-color: rgba(225, 225, 225);
 }
 
-/** NAVBAR **/
+/***************************** NAVBAR *****************************/
 .nav {
     position: fixed;
     z-index: 5;
@@ -104,7 +113,7 @@ section {
 .menu-burger::after {
     transform: translateY(7px);
 }
-/* Animation */
+/*=============== Animation ===============*/
 .menu-btn.open .menu-burger {
     background: transparent;
 }
@@ -115,7 +124,7 @@ section {
     transform: rotate(-45deg);
 }
 
-/** HEADER **/
+/***************************** HEADER *****************************/
 .header-line {
     position: relative;
     top: 50%;
@@ -133,7 +142,7 @@ section {
 .close-tag {
     color: #2f7295;
 }
-/* Animation */
+/*=============== Animation ===============*/
 .anim-typewriter {
     animation: typewriter 2.2s steps(22) 1s 1 normal both,
         blinkTextCursor 700ms steps(44) infinite normal;
@@ -155,8 +164,8 @@ section {
     }
 }
 
-/** ABOUT PAGE **/
-/*My Picture*/
+/***************************** ABOUT PAGE *****************************/
+/*=============== My Picture ===============*/
 .my-pic-container {
     display: flex;
     align-items: center;
@@ -165,7 +174,7 @@ section {
 .my-pic {
     width: 300px;
 }
-/* About Content */
+/*=============== About Content ===============*/
 .about {
     display: flex;
     flex-direction: column;
@@ -213,7 +222,7 @@ section {
     cursor: pointer;
 }
 
-/** RESPONSIVE **/
+/***************************** RESPONSIVE *****************************/
 @media (min-width: 768px) {
     .menu-list li a:hover,
     .nav .logo a:hover {
