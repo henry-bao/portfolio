@@ -19,13 +19,12 @@ section {
     height: 100vh;
     padding: 4em;
 }
-#sec-1 {
+.landing-css {
     background-color: rgb(15, 15, 15);
     color: rgba(255, 255, 255, 0.75);
 }
-#sec-2 {
-    background-color: rgba(210, 210, 210);
-    overflow: hidden;
+.about-css {
+    background-color: rgba(225, 225, 225);
 }
 
 /** NAVBAR **/
@@ -241,7 +240,7 @@ section {
     .about-title {
         padding-top: 0;
         padding-bottom: 0.5em;
-        font-size: 22px;
+        font-size: 24px;
     }
 }
 @media (max-width: 768px) {
