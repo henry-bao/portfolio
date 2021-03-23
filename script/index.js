@@ -1,7 +1,7 @@
 'use strict';
 
 const body = document.querySelector('body');
-const navBtn = document.querySelectorAll('.menu-list li');
+const navBtn = document.querySelectorAll('.menu-list li a');
 const menu = document.querySelector('.menu-list');
 const navBar = document.querySelector('.nav');
 const menuBtn = document.querySelector('.menu-btn');
