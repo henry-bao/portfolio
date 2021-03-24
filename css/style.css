@@ -20,6 +20,12 @@ section {
     max-height: 100%;
     padding: 4em;
 }
+.sec-title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 2em;
+}
 /*=============== landing section ===============*/
 .landing-css {
     height: 100vh;
@@ -183,12 +189,6 @@ section {
     flex-direction: column;
     justify-content: space-between;
 }
-.about-title {
-    font-size: 30px;
-    font-weight: 600;
-    text-align: center;
-    padding-top: 2em;
-}
 .about-container {
     display: flex;
     height: 100%;
@@ -252,7 +252,7 @@ details > div {
     padding: 0 20px;
     font-family: 'Karla', sans-serif;
     line-height: 1.5;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 details > div > img {
@@ -269,6 +269,15 @@ details > div > .description {
 details[open] > summary {
     color: #2f7295;
 }
+.details-href {
+    color: #2f7295;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.details-href:hover {
+    color: #c0738b;
+    cursor: pointer;
+}
 
 @media (min-width: 768px) {
     details[open] > div > .description {
@@ -279,6 +288,9 @@ details[open] > summary {
         animation-fill-mode: forwards;
         margin: 0;
         padding-left: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
     }
 
     details[open] > div {
@@ -286,6 +298,7 @@ details[open] > summary {
         animation-duration: 0.3s;
         animation-fill-mode: forwards;
         flex-direction: row;
+        font-size: 15px;
     }
 
     details[open] > div > img {
@@ -359,7 +372,7 @@ details[open] > summary {
     .nav .logo a {
         font-size: 20px;
     }
-    .about-title {
+    .sec-title {
         padding-top: 0;
         padding-bottom: 0.5em;
         font-size: 24px;
