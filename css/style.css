@@ -400,6 +400,9 @@ details[open] > summary {
     .my-pic {
         width: 150px;
     }
+    .about {
+        padding-top: 30px;
+    }
     .about-list li {
         font-size: 15px;
     }
