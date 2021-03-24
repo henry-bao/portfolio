@@ -235,13 +235,11 @@ summary {
     border-bottom: 2px solid;
     user-select: none;
 }
-
 details:active :focus {
     outline: 0;
     border: none;
     outline-style: none;
 }
-
 details > div {
     display: flex;
     flex-wrap: wrap;
@@ -254,18 +252,15 @@ details > div {
     line-height: 1.5;
     font-size: 10px;
 }
-
 details > div > img {
     align-self: flex-start;
     max-width: 25%;
     margin-top: 20px;
     margin-bottom: 10px;
 }
-
 details > div > .description {
     flex: 1;
 }
-
 details[open] > summary {
     color: #2f7295;
 }
@@ -279,7 +274,12 @@ details[open] > summary {
     cursor: pointer;
 }
 
+/***************************** RESPONSIVE *****************************/
 @media (min-width: 768px) {
+    .menu-list li a:hover,
+    .nav .logo a:hover {
+        color: rgba(200, 200, 200, 0.55);
+    }
     details[open] > div > .description {
         opacity: 0;
         animation-name: showContent;
@@ -309,50 +309,6 @@ details[open] > summary {
         animation-duration: 0.3s;
         animation-delay: 0.15s;
         animation-fill-mode: forwards;
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        height: 0;
-        padding: 0;
-    }
-
-    to {
-        opacity: 1;
-        height: var(--contentHeight);
-        padding: 20px;
-    }
-}
-
-@keyframes showImage {
-    from {
-        opacity: 0;
-        clip-path: inset(50% 0 50% 0);
-        transform: scale(0.4);
-    }
-
-    to {
-        opacity: 1;
-        clip-path: inset(0 0 0 0);
-    }
-}
-
-@keyframes showContent {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/***************************** RESPONSIVE *****************************/
-@media (min-width: 768px) {
-    .menu-list li a:hover,
-    .nav .logo a:hover {
-        color: rgba(200, 200, 200, 0.55);
     }
 }
 
@@ -418,5 +374,39 @@ details[open] > summary {
     }
     .about-list li {
         font-size: 15px;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        height: 0;
+        padding: 0;
+    }
+
+    to {
+        opacity: 1;
+        height: var(--contentHeight);
+        padding: 20px;
+    }
+}
+@keyframes showImage {
+    from {
+        opacity: 0;
+        clip-path: inset(50% 0 50% 0);
+        transform: scale(0.4);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+@keyframes showContent {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
