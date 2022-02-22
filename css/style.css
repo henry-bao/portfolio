@@ -138,7 +138,7 @@ section {
 /***************************** HEADER *****************************/
 .header-line {
     position: relative;
-    top: 50%;
+    top: 45%;
     width: 24em;
     margin: 0 auto;
     border-right: 3px solid rgba(255, 255, 255, 0.75);
@@ -341,7 +341,7 @@ details[open] > summary {
 }
 @media (max-width: 768px) {
     .header-line {
-        font-size: 50%;
+        font-size: 60%;
         top: 40%;
     }
     body.disableScroll {
