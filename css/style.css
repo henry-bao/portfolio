@@ -341,7 +341,7 @@ details[open] > summary {
 }
 @media (max-width: 768px) {
     .header-line {
-        font-size: 60%;
+        font-size: 50%;
         top: 40%;
     }
     body.disableScroll {
