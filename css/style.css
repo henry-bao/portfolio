@@ -41,6 +41,8 @@ section {
 /*=============== Project section ===============*/
 .project-css {
     background-color: rgba(235, 235, 235);
+    padding-left: 10.5em;
+    padding-right: 10.5em;
 }
 /*=============== Contact section ===============*/
 .contact-css {
@@ -278,7 +280,6 @@ details[open] > summary {
 
 /***************************** CONTACT PAGE *****************************/
 
-
 /***************************** RESPONSIVE *****************************/
 @media (min-width: 768px) {
     .menu-list li a:hover,
@@ -337,6 +338,10 @@ details[open] > summary {
         padding-top: 0;
         padding-bottom: 0.5em;
         font-size: 24px;
+    }
+    .project-css {
+        padding-left: 3em;
+        padding-right: 3em;
     }
 }
 @media (max-width: 768px) {
