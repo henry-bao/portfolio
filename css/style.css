@@ -166,7 +166,7 @@ section {
         width: 0;
     }
     to {
-        width: 28em;
+        width: 24em;
     }
 }
 @keyframes blinkTextCursor {
@@ -335,19 +335,27 @@ details[open] > summary {
     .nav .logo a {
         font-size: 20px;
     }
+    .header-line {
+        font-size: 100%;
+        top: 45%;
+    }
     .sec-title {
         padding-top: 0;
         padding-bottom: 0.5em;
         font-size: 24px;
     }
-    .project-css {
-        padding-left: 3em;
-        padding-right: 3em;
-    }
 }
 @media (max-width: 768px) {
+    .project-css {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+    section {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
     .header-line {
-        font-size: 50%;
+        font-size: 65%;
         top: 40%;
     }
     body.disableScroll {
