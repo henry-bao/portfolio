@@ -368,7 +368,6 @@ details[open] > summary {
     }
     .header-line {
         font-size: 12px;
-        top: 35%;
     }
     body.disableScroll {
         overflow: hidden;
