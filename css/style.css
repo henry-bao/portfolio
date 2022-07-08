@@ -34,6 +34,7 @@ section {
     height: 100vh;
     background-color: rgb(15, 15, 15);
     color: rgba(255, 255, 255, 0.75);
+    text-align: center;
 }
 /*=============== About section ===============*/
 .about-css {
@@ -137,18 +138,11 @@ section {
 .menu-btn.open .menu-burger::after {
     transform: rotate(-45deg);
 }
-
 /***************************** HEADER *****************************/
-.header-line {
-    position: relative;
-    top: 45%;
-    width: 24em;
-    margin: 0 auto;
-    border-right: 3px solid rgba(255, 255, 255, 0.75);
-    font-size: 150%;
-    white-space: nowrap;
-    overflow: hidden;
-    transform: translateY(-50%);
+.hello-container {
+    display: inline-block;
+    padding-top: 35vh;
+    font-size: 2.5rem;
 }
 .open-tag {
     color: #2f7295;
@@ -157,24 +151,27 @@ section {
     color: #2f7295;
 }
 /*=============== Animation ===============*/
-.anim-typewriter {
-    animation: typewriter 2.2s steps(22) 1s 1 normal both,
-        blinkTextCursor 700ms steps(44) infinite normal;
+.type-animation {
+    overflow: hidden;
+    border-right: 0.15em solid grey;
+    white-space: nowrap;
+    animation: typing 1.8s steps(25, end) forwards, blinking 0.9s infinite;
+    width: 0;
 }
-@keyframes typewriter {
+@keyframes typing {
     from {
         width: 0;
     }
     to {
-        width: 24em;
+        width: 100%;
     }
 }
-@keyframes blinkTextCursor {
+@keyframes blinking {
     from {
-        border-right-color: rgba(255, 255, 255, 0.75);
+        border-color: transparent;
     }
     to {
-        border-right-color: transparent;
+        border-color: grey;
     }
 }
 
@@ -228,6 +225,40 @@ section {
 .about-click:hover {
     color: #2f7295;
     cursor: pointer;
+}
+.wave-hand {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 3.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 /***************************** PROJECT PAGE *****************************/
@@ -320,6 +351,10 @@ details[open] > summary {
 }
 
 @media (max-width: 1200px) {
+    .hello-container {
+        padding-top: 35vh;
+        font-size: 2rem;
+    }
     .about {
         align-items: center;
     }
@@ -329,18 +364,6 @@ details[open] > summary {
     }
     .about-list li {
         font-size: 18px;
-    }
-    @keyframes typewriter {
-        from {
-            width: 0;
-        }
-        to {
-            width: 26em;
-        }
-    }
-    .header-line {
-        font-size: 100%;
-        top: 40%;
     }
     .project-css {
         padding-left: 4em;
@@ -358,6 +381,10 @@ details[open] > summary {
     }
 }
 @media (max-width: 768px) {
+    .hello-container {
+        padding-top: 32vh;
+        font-size: 1.1rem;
+    }
     .project-css {
         padding-left: 1.5em;
         padding-right: 1.5em;
@@ -365,9 +392,6 @@ details[open] > summary {
     section {
         padding-left: 1.5em;
         padding-right: 1.5em;
-    }
-    .header-line {
-        font-size: 12px;
     }
     body.disableScroll {
         overflow: hidden;
@@ -401,6 +425,13 @@ details[open] > summary {
     }
     .about-list li {
         font-size: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .hello-container {
+        padding-top: 28vh;
+        font-size: 0.9rem;
     }
 }
 
