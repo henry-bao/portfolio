@@ -153,9 +153,9 @@ section {
 /*=============== Animation ===============*/
 .type-animation {
     overflow: hidden;
-    border-right: 0.15em solid grey;
+    border-right: 0.08em solid grey;
     white-space: nowrap;
-    animation: typing 1.8s steps(25, end) forwards, blinking 0.9s infinite;
+    animation: typing 1.5s steps(30, end) forwards, blinking 0.9s infinite;
     width: 0;
 }
 @keyframes typing {
