@@ -175,7 +175,7 @@ footer > p > a:hover {
     border-color: rgba(255, 255, 255, 0.75);
     border-style: solid;
     animation: bounce 2s 0s ease infinite;
-    margin: 35vh auto;
+    margin: 30vh auto;
     transform: rotate(45deg);
 }
 
