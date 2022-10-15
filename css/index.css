@@ -176,8 +176,8 @@ footer > p > a:hover {
     border-color: rgba(255, 255, 255, 0.75);
     border-style: solid;
     animation: bounce 2s 0s ease infinite;
-    margin-top: 40vh;
-    margin-left: 48%;
+    margin-top: 35vh;
+    margin-left: 49%;
 }
 
 @keyframes bounce {
