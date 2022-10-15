@@ -171,13 +171,12 @@ footer > p > a:hover {
     width: 0.8em;
     height: 0.8em;
     display: flex;
-    transform: rotate(45deg);
     border-width: 0 2px 2px 0;
     border-color: rgba(255, 255, 255, 0.75);
     border-style: solid;
     animation: bounce 2s 0s ease infinite;
-    margin-top: 35vh;
-    margin-left: 48.4%;
+    margin: 35vh auto;
+    transform: rotate(45deg);
 }
 
 @keyframes bounce {
