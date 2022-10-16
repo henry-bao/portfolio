@@ -165,7 +165,6 @@ footer > p > a:hover {
 .close-tag {
     color: #2f7295;
 }
-
 .scroll-indicator {
     position: relative;
     width: 0.8em;
@@ -175,10 +174,25 @@ footer > p > a:hover {
     border-color: rgba(255, 255, 255, 0.75);
     border-style: solid;
     animation: bounce 2s 0s ease infinite;
+    animation-fill-mode: forwards;
     margin: 30vh auto;
     transform: rotate(45deg);
 }
+.scroll-indicator-container {
+    animation: 5s fadeIn;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
 @keyframes bounce {
     0% {
         top: -0.8em;
@@ -199,6 +213,7 @@ footer > p > a:hover {
     animation: typing 1.5s steps(30, end) forwards, blinking 0.9s infinite;
     width: 0;
 }
+
 @keyframes typing {
     from {
         width: 0;
@@ -371,7 +386,6 @@ details[open] > summary {
         justify-content: space-evenly;
         flex-direction: column;
     }
-
     details[open] > div {
         animation-name: slideDown;
         animation-duration: 0.3s;
@@ -379,7 +393,6 @@ details[open] > summary {
         flex-direction: row;
         font-size: 15px;
     }
-
     details[open] > div > img {
         opacity: 0;
         height: 100%;
@@ -390,7 +403,6 @@ details[open] > summary {
         animation-fill-mode: forwards;
     }
 }
-
 @media (max-width: 1200px) {
     .hello-container {
         font-size: 2rem;
@@ -467,7 +479,6 @@ details[open] > summary {
         font-size: 15px;
     }
 }
-
 @media (max-width: 350px) {
     .hello-container {
         padding-top: 28vh;
