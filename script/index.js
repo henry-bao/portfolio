@@ -32,3 +32,13 @@ navBtn.forEach((btn) => {
 window.onscroll = () => {
     this.scrollY > 20 ? navBar.classList.add('sticky') : navBar.classList.remove('sticky');
 };
+
+const sendPostRequest = (data) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open(
+        'POST',
+        'https://maker.ifttt.com/trigger/form_submit/with/key/m80IkLy_6mLrZpP3LVsGlNd6P1Lm20vtWc6NE9V8-Iz'
+    );
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(data));
+};
