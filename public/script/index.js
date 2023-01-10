@@ -35,10 +35,7 @@ window.onscroll = () => {
 
 const sendPostRequest = (data) => {
     const xhr = new XMLHttpRequest();
-    xhr.open(
-        'POST',
-        'https://maker.ifttt.com/trigger/form_submit/with/key/m80IkLy_6mLrZpP3LVsGlNd6P1Lm20vtWc6NE9V8-Iz'
-    );
+    xhr.open('POST');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(data));
 };
