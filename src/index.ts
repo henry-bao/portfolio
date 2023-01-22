@@ -1,26 +1,18 @@
 import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
-import { promises as fs } from 'fs';
+import mime from 'mime-types';
 
 const app = express();
 
-app.get('/', async (_req, res) => {
-    const html = await fs.readFile('public/index.html');
-    console.log(html);
-    res.type('html').send(html);
+app.use(async (req, res) => {
+    const reqFileName = req.path === '/' ? 'index.html' : req.path;
+    const contentType = mime.lookup(reqFileName);
+    res.contentType(contentType === false ? 'text/plain' : contentType).sendFile(reqFileName, { root: 'public' });
 });
 
-app.get('css/index.css', async (_req, res) => {
-    const css = await fs.readFile('public/css/style.css');
-    res.type('css').send(css);
-});
+const port = process.env.PORT || 3000;
 
-app.get('script/script.js', async (_req, res) => {
-    const js = await fs.readFile('public/script/index.js');
-    res.type('js').send(js);
-});
-
-app.listen('3000', () => {
-    console.log('Website can be viewed on https://localhost:3000');
+app.listen(port, () => {
+    console.log(`App started on port ${port}\nLocal website can be viewed on http://localhost:${port}`);
 });
