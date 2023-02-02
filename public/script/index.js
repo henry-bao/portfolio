@@ -1,5 +1,9 @@
 'use strict';
 
+const init = () => {
+    logAscii();
+};
+
 const body = document.querySelector('body');
 const navBtn = document.querySelectorAll('.menu-list li a');
 const menu = document.querySelector('.menu-list');
@@ -31,13 +35,6 @@ navBtn.forEach((btn) => {
 
 window.onscroll = () => {
     this.scrollY > 20 ? navBar.classList.add('sticky') : navBar.classList.remove('sticky');
-};
-
-const sendPostRequest = (data) => {
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST');
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(data));
 };
 
 const logAscii = () => {
