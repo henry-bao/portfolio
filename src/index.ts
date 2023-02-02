@@ -6,10 +6,19 @@ import axios from 'axios';
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get('/my-image', (req, res) => {
-    const reqReferer = req.headers.referer;
-    console.log(`Traffic coming from: ${reqReferer}`);
-    if (reqReferer && reqReferer.includes('linkedin.com')) {
+let origin: string | null = null;
+
+app.get('/', (req, _res, next) => {
+    if (req.query.origin) {
+        origin = req.query.origin.toString();
+    } else {
+        origin = null;
+    }
+    next();
+});
+
+app.get('/my-image', (_req, res) => {
+    if (origin && origin.includes('linkedin')) {
         res.sendFile('img/linkedin-portrait.png', { root: 'public' });
     } else {
         res.sendFile('img/henry.png', { root: 'public' });
