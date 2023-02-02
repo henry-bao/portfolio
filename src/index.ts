@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 
 app.get('/my-image', (req, res) => {
     const reqReferer = req.headers.referer;
+    console.log(`Traffic coming from: ${reqReferer}`);
     if (reqReferer && reqReferer.includes('linkedin.com')) {
         res.sendFile('/img/linkedin_portrait.png', { root: 'public' });
     } else {
