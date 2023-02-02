@@ -10,9 +10,9 @@ app.get('/my-image', (req, res) => {
     const reqReferer = req.headers.referer;
     console.log(`Traffic coming from: ${reqReferer}`);
     if (reqReferer && reqReferer.includes('linkedin.com')) {
-        res.sendFile('/img/linkedin_portrait.png', { root: 'public' });
+        res.sendFile('img/linkedin-portrait.png', { root: 'public' });
     } else {
-        res.sendFile('/img/henry.png', { root: 'public' });
+        res.sendFile('img/henry.png', { root: 'public' });
     }
 });
 
