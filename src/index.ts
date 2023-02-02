@@ -29,5 +29,7 @@ app.get('/form-submit', (req, res) => {
 app.use(express.static('public'));
 
 app.listen(port, () => {
-    console.log(`App started on port ${port}\nLocal website can be viewed on http://localhost:${port}`);
+    if (process.env.NODE_ENV === 'dev') {
+        console.log(`App started on port ${port}\nLocal website can be viewed on http://localhost:${port}`);
+    }
 });
