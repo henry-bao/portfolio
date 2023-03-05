@@ -7,7 +7,7 @@
     "license": "MIT",
     "scripts": {
         "start": "node dist/index.js",
-        "build": "tsc",
+        "build": "tsc -p .",
         "dev": "export NODE_ENV=dev && nodemon src/index.ts",
         "watch": "tsc -w"
     },
