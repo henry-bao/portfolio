@@ -183,6 +183,40 @@ footer > p > a:hover {
     animation-fill-mode: forwards;
     visibility: hidden;
 }
+.wave-hand {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 3.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 @keyframes fadeIn {
     0% {
@@ -233,7 +267,7 @@ footer > p > a:hover {
 
 /***************************** ABOUT PAGE *****************************/
 /*=============== My Picture ===============*/
-.my-pic-container {
+.about-pic-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,15 +281,32 @@ footer > p > a:hover {
     flex-direction: column;
     justify-content: space-between;
 }
-.about-container {
+.about-content-container {
     display: flex;
     height: 100%;
     justify-content: space-around;
     padding-top: 4em;
 }
-.about-list {
+.about-lang-button-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #dadada;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.about-lang-button-container button {
+    background-color: #6b96b6;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 5px;
+}
+.about-lang-button-container button:hover {
+    background-color: #2f7295;
+}
+.about-list {
     list-style: none;
 }
 .about-list li:first-child {
@@ -281,40 +332,6 @@ footer > p > a:hover {
 .about-click:hover {
     color: #2f7295;
     cursor: pointer;
-}
-.wave-hand {
-    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-    animation-duration: 3.5s; /* Change to speed up or slow down */
-    animation-iteration-count: infinite; /* Never stop waving :) */
-    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-    display: inline-block;
-}
-
-@keyframes wave-animation {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(14deg);
-    } /* The following five values can be played with to make the waving more or less extreme */
-    20% {
-        transform: rotate(-8deg);
-    }
-    30% {
-        transform: rotate(14deg);
-    }
-    40% {
-        transform: rotate(-4deg);
-    }
-    50% {
-        transform: rotate(10deg);
-    }
-    60% {
-        transform: rotate(0deg);
-    } /* Reset for the last half to pause */
-    100% {
-        transform: rotate(0deg);
-    }
 }
 
 /***************************** PROJECT PAGE *****************************/
@@ -410,7 +427,7 @@ details[open] > summary {
     .about {
         align-items: center;
     }
-    .about-container {
+    .about-content-container {
         padding: 0;
         flex-direction: column-reverse;
     }
