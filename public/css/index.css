@@ -273,7 +273,7 @@ footer > p > a:hover {
     justify-content: center;
 }
 .my-pic {
-    width: 300px;
+    width: 350px;
 }
 /*=============== About Content ===============*/
 .about {
@@ -296,12 +296,14 @@ footer > p > a:hover {
 }
 .about-lang-button-container button {
     background-color: #6b96b6;
-    padding: 5px 10px;
+    padding: 10px 20px;
     color: white;
     cursor: pointer;
     font-size: 20px;
     border-style: none;
     border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 .about-lang-button-container button:hover {
     background-color: #2f7295;
