@@ -42,7 +42,7 @@ section {
     background-color: rgba(245, 245, 245);
 }
 /*=============== Project section ===============*/
-.experience-css {
+.projects-css {
     background-color: rgba(235, 235, 235);
     padding-left: 10.5em;
     padding-right: 10.5em;
@@ -418,7 +418,7 @@ details[open] > summary {
     .about-list li {
         font-size: 18px;
     }
-    .experience-css {
+    .projects-css {
         padding-left: 4em;
         padding-right: 4em;
     }
@@ -438,7 +438,7 @@ details[open] > summary {
         padding-top: 32vh;
         font-size: 1.1rem;
     }
-    .experience-css {
+    .projects-css {
         padding-left: 1.5em;
         padding-right: 1.5em;
     }
